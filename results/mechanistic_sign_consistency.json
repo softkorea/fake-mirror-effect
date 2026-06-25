@@ -1,0 +1,11 @@
+{
+  "w_rec_sign_consistency": {
+    "mean": 0.563,
+    "min": 0.35,
+    "n_models": 20,
+    "seeds": "0-19",
+    "protocol": "v2 (1000 epochs, lr 0.01, time_weights [0,0.2,1.0], tau 2.0)",
+    "source": "experiments/run_mechanistic.py (computed from 20 retrained target models; deterministic NumPy, reproduces exactly)",
+    "paper_ref": "Section 3.5 structural diversity (0.563)"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "n_models": 20,
+  "modes": {
+    "self": {
+      "kappa_mean": 1129.9344581785824,
+      "kappa_sd": 2411.5685532997486,
+      "sigma_max_mean": 1.0862140176217905,
+      "sigma_min_mean": 0.1290997767779217,
+      "kappa_median_typical": 13.1093234162943
+    },
+    "clone": {
+      "kappa_mean": 595.4205539866197,
+      "kappa_sd": 987.9603262627044,
+      "sigma_max_mean": 1.0929881988628511,
+      "sigma_min_mean": 0.14687190034201647,
+      "kappa_median_typical": 10.091840238099898
+    },
+    "wrong_traj": {
+      "kappa_mean": 921.5213458837267,
+      "kappa_sd": 1908.7115762885846,
+      "sigma_max_mean": 1.0888068778271776,
+      "sigma_min_mean": 0.13181622023820397,
+      "kappa_median_typical": 12.52560919776813
+    },
+    "normmatched_clone": {
+      "kappa_mean": 475.5953255337007,
+      "kappa_sd": 622.1257263175961,
+      "sigma_max_mean": 1.0678051746844488,
+      "sigma_min_mean": 0.12721433633657578,
+      "kappa_median_typical": 14.001769021475795
+    }
+  },
+  "pairwise_kappa": {
+    "self_minus_clone": {
+      "delta_mean": 534.5139041919628,
+      "wilcoxon_T": 95.0,
+      "wilcoxon_p": 0.7285060882568359
+    },
+    "self_minus_wrong_traj": {
+      "delta_mean": 208.41311229485558,
+      "wilcoxon_T": 43.0,
+      "wilcoxon_p": 0.01923370361328125
+    },
+    "self_minus_normmatched_clone": {
+      "delta_mean": 654.3391326448816,
+      "wilcoxon_T": 86.0,
+      "wilcoxon_p": 0.49800872802734375
+    },
+    "clone_minus_wrong_traj": {
+      "delta_mean": -326.1007918971072,
+      "wilcoxon_T": 100.0,
+      "wilcoxon_p": 0.8694877624511719
+    },
+    "clone_minus_normmatched_clone": {
+      "delta_mean": 119.82522845291888,
+      "wilcoxon_T": 92.0,
+      "wilcoxon_p": 0.6476554870605469
+    }
+  },
+  "interpretation_note": "If \u03ba(clone) and \u03ba(self) differ qualitatively across seeds, the local sensitivity of the W_rec map at clone-feedback states is structurally different from at self-feedback states, supporting a trajectory-specific reading of the C1/C2 dissociation. If \u03ba values are similar across modes, the hedged sensitivity reading in the paper's discussion applies: the local-linear sensitivity tool is uninformative for this geometry, and the intervention experiments (R5b NormMatched) carry the sensitivity question instead.",
+  "kappa_contrasts": {
+    "median": {
+      "statistic": "per-seed median (PRIMARY)",
+      "typical_per_mode": {
+        "self": 13.1093234162943,
+        "clone": 10.091840238099898,
+        "wrong_traj": 12.52560919776813,
+        "normmatched_clone": 14.001769021475795
+      },
+      "n_contrasts": 6,
+      "min_raw_p": 0.7285060882568359,
+      "all_holm_nonsignificant": true,
+      "contrasts": {
+        "self_vs_clone": {
+          "delta_mean": -0.2912099716073616,
+          "p_raw": 0.7285060882568359,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -14.304249127674591,
+            12.213134904395815
+          ]
+        },
+        "self_vs_wrong_traj": {
+          "delta_mean": -0.6228989840734787,
+          "p_raw": 0.956329345703125,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -2.311648384789681,
+            0.5220658821216881
+          ]
+        },
+        "self_vs_normmatched_clone": {
+          "delta_mean": 2.202325599602978,
+          "p_raw": 0.8983173370361328,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -1.3547645087318423,
+            6.557582946339453
+          ]
+        },
+        "clone_vs_wrong_traj": {
+          "delta_mean": -0.3316890124661159,
+          "p_raw": 0.8983173370361328,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -14.140830317789664,
+            14.244611092936783
+          ]
+        },
+        "clone_vs_normmatched_clone": {
+          "delta_mean": 2.4935355712103395,
+          "p_raw": 0.8123550415039062,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -7.412071092906055,
+            14.50253775269503
+          ]
+        },
+        "wrong_traj_vs_normmatched_clone": {
+          "delta_mean": 2.825224583676457,
+          "p_raw": 0.8408222198486328,
+          "p_holm": 1.0,
+          "ci95_median_diff": [
+            -1.6786295764199308,
+            8.696166536365556
+          ]
+        }
+      }
+    },
+    "mean": {
+      "statistic": "per-seed mean (secondary, tail-sensitive)",
+      "typical_per_mode": {
+        "self": 94.34053060341984,
+        "clone": 207.01682719320803,
+        "wrong_traj": 82.41976726815054,
+        "normmatched_clone": 144.27078774700402
+      },
+      "n_contrasts": 6,
+      "min_raw_p": 0.01923370361328125,
+      "all_holm_nonsignificant": true,
+      "contrasts": {
+        "self_vs_clone": {
+          "delta_mean": 534.5139041919628,
+          "p_raw": 0.7285060882568359,
+          "p_holm": 1.0
+        },
+        "self_vs_wrong_traj": {
+          "delta_mean": 208.41311229485558,
+          "p_raw": 0.01923370361328125,
+          "p_holm": 0.1154022216796875
+        },
+        "self_vs_normmatched_clone": {
+          "delta_mean": 654.3391326448816,
+          "p_raw": 0.49800872802734375,
+          "p_holm": 1.0
+        },
+        "clone_vs_wrong_traj": {
+          "delta_mean": -326.1007918971072,
+          "p_raw": 0.8694877624511719,
+          "p_holm": 1.0
+        },
+        "clone_vs_normmatched_clone": {
+          "delta_mean": 119.82522845291888,
+          "p_raw": 0.6476554870605469,
+          "p_holm": 1.0
+        },
+        "wrong_traj_vs_normmatched_clone": {
+          "delta_mean": 445.9260203500261,
+          "p_raw": 0.5958194732666016,
+          "p_holm": 1.0
+        }
+      }
+    }
+  }
+}

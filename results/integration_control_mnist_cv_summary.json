@@ -1,0 +1,40 @@
+{
+  "n_models": 20,
+  "noise": 0.5,
+  "device": "cuda",
+  "baseline": {
+    "bl_gain_mean": 0.018764993548393248,
+    "bl_gain_sd": 0.004722423770264113
+  },
+  "r4_within_network_ensemble": {
+    "logprod": {
+      "e1_gain_mean": 0.01233498752117157,
+      "residual_mean": 0.00643000602722168,
+      "residual_ci_95": [
+        0.004605007171630859,
+        0.008114999532699585
+      ],
+      "ratio_e1_over_bl": 0.6573403550265411,
+      "paired_wilcoxon_T": 4.0,
+      "paired_wilcoxon_p": 1.33514404296875e-05
+    },
+    "probmean": {
+      "e1_gain_mean": 0.012324994802474976,
+      "residual_mean": 0.006439998745918274,
+      "residual_ci_95": [
+        0.0046799957752227785,
+        0.008079996705055237
+      ],
+      "ratio_e1_over_bl": 0.6568078358614892,
+      "paired_wilcoxon_T": 2.0,
+      "paired_wilcoxon_p": 1.1444091796875e-05
+    }
+  },
+  "comparison_to_numpy_run": {
+    "numpy_bl_gain": null,
+    "numpy_e1_logprod_gain": null,
+    "numpy_ratio": null,
+    "numpy_paired_p": null,
+    "note": "MNIST scale (~120k parameters, 10-class) is roughly 370x larger in parameter count than the 35-neuron model and tests whether the within-network ensemble equivalence holds at a different architecture / dataset (scale generalization). The numeric NumPy comparison is reported in the paper against the re-derived reference numbers, not hardcoded here."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "n_models": 20,
+  "init": "he_normal",
+  "noise": 0.5,
+  "baseline": {
+    "bl_gain_mean": 0.14849999994039537,
+    "bl_gain_sd": 0.05561250765552763
+  },
+  "r4_within_network_ensemble": {
+    "logprod": {
+      "e1_gain_mean": 0.1419999971985817,
+      "residual_mean": 0.0065000027418136595,
+      "residual_ci_95": [
+        -0.022249996662139893,
+        0.03725000023841858
+      ],
+      "ratio_e1_over_bl": 0.9562289377479958,
+      "paired_wilcoxon_T": 102.0,
+      "paired_wilcoxon_p": 0.9191093444824219
+    },
+    "probmean": {
+      "e1_gain_mean": 0.13824999779462815,
+      "residual_mean": 0.010250002145767212,
+      "residual_ci_95": [
+        -0.019499993324279784,
+        0.043750008940696715
+      ],
+      "ratio_e1_over_bl": 0.9309764164991156,
+      "paired_wilcoxon_T": 70.0,
+      "paired_wilcoxon_p": 0.77301025390625
+    }
+  },
+  "comparison_to_numpy_run": {
+    "numpy_bl_gain": null,
+    "numpy_e1_logprod_gain": null,
+    "numpy_ratio": null,
+    "numpy_p_paired": null,
+    "note": "The PyTorch values above provide an independent cross-implementation check on the same architecture (35-neuron RecurrentMLP, He normal init, weighted-average time-weighted loss (0, 0.2, 1.0), full-batch SGD lr=0.01). The numeric NumPy comparison is reported in the paper against the re-derived reference numbers, not hardcoded here."
+  }
+}
