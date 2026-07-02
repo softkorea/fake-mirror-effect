@@ -19,8 +19,10 @@ requires `torch` plus the PyTorch companion repository (see the README).
 - `src/` (7) — `network.py`, `training.py`, `ablation.py`, `metrics.py`,
   `visualize.py`, `__init__.py` (pure NumPy), plus `closed_loop_aligner.py`
   (PyTorch, used only by the Appendix-G script).
-- `experiments/` (24) — 20 NumPy phases driven by `run_all.py`, plus 4 PyTorch
-  closed-loop scripts (Appendix G; run separately, not via `run_all.py`).
+- `experiments/` (25) — 20 NumPy phases driven by `run_all.py`, plus 4 PyTorch
+  closed-loop scripts (Appendix G; run separately, not via `run_all.py`), plus the
+  standalone NumPy spot-check `run_c2_inversion_spotcheck.py` (regenerates
+  `results/c2_inversion_hyperparam_spotcheck.csv`, the paper's Limitations item 6).
 - `results/` — frozen result data:
   - **28 NumPy CSVs** regenerated and bit-diffed by a run (Table 1 / Figures /
     sweeps / scale / integration-control).

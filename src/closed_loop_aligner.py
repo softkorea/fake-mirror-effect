@@ -7,7 +7,7 @@ the frozen target's BPTT unroll back to the aligner.
 Used by experiments/run_closed_loop_alignment.py (Appendix G; establishes a
 task-supervised upper bound).
 
-Design (the pre-specified analysis plan):
+Design:
   - Aligner output is PRE-TANH logits. Forward path is:
       aligned_logits = A(y_donor_prev)
       feedback       = tanh(aligned_logits / tau)

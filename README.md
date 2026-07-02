@@ -113,6 +113,23 @@ seeds (train `s`, held-out test `s+500`, donor `s+100`), `OMP_NUM_THREADS=1`, an
 no GPU. Per-seed values are therefore reproducible bit-for-bit; only row order and
 the `elapsed_s` timing column vary between runs.
 
+## Citation
+
+```bibtex
+@article{ong2026fakemirror,
+  title   = {The Fake Mirror Effect: Foreign Feedback Disrupts Self-Correction
+             in Minimal Recurrent Networks},
+  author  = {Sungmoon Ong},
+  journal = {Transactions on Machine Learning Research},
+  issn    = {2835-8856},
+  year    = {2026},
+  url     = {https://openreview.net/forum?id=cwENvGCLRv}
+}
+```
+
+Companion repositories: [PyTorch cross-validation](https://github.com/softkorea/pytorch-35neuron-validation) ·
+[MNIST-scale extension](https://github.com/softkorea/mnist-feedback-contract)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

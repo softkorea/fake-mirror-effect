@@ -356,7 +356,7 @@ def analyze(main_csv, xt_only_csv, static_pt_csv, shuffled_csv, zero_donor_csv,
         'bang_bang': flag_bangbang,
     }
 
-    # Outcome category
+    # Outcome category (the pre-specified analysis plan)
     # Examine MLP-large primarily (the largest aligner; the saturation point)
     large = summary['per_size']['MLP-large']
     h2_large_passes = large['h2']['primary_equiv']

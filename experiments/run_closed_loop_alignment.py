@@ -56,7 +56,6 @@ os.environ.setdefault("NUMEXPR_NUM_THREADS",  "1")
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ_ROOT = os.path.dirname(HERE)
 sys.path.insert(0, PROJ_ROOT)
-# PyTorch companion (Appendix G): clone it to ../pytorch-35neuron-validation (see README).
 PYTORCH_REPO = os.path.normpath(os.path.join(PROJ_ROOT, '..', 'pytorch-35neuron-validation'))
 sys.path.insert(0, PYTORCH_REPO)
 
